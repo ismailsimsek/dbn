@@ -8,7 +8,7 @@
     <depends>com.intellij.modules.lang</depends>
     <depends optional="true" config-file="JavaPlugin.xml">com.intellij.modules.java</depends>
     <vendor email="dancioca@bluewin.ch" logo="/img/project/DatabaseNavigator.png">Dan Cioca</vendor>
-    <idea-version since-build="181.0001" until-build="201.*"/>
+    <idea-version since-build="181.0001" until-build="*.*"/>
     <description><![CDATA[
             <b>Database development, scripting and navigation tool</b><br>
             This product adds extensive database development and maintenance capabilities to the IntelliJ IDEA development environment and related products.
