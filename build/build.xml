@@ -72,6 +72,7 @@
     <target name="compile" description="Compile">
         <mkdir dir="${compiler.output.dir}"/>
         <javac2 srcdir="${source.dir}"
+                encoding="UTF-8"
                 destdir="${compiler.output.dir}"
                 source="1.8"
                 target="1.8"
