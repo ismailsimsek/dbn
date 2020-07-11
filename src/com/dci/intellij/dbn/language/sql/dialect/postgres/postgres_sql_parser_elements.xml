@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--<!DOCTYPE element-defs SYSTEM "../../../common/definition/language-parser-elements.dtd">--><element-defs language="POSTGRES-SQL" version="9.4">
+<!DOCTYPE element-defs SYSTEM "../../../common/definition/language-parser-elements.dtd">
+<element-defs language="POSTGRES-SQL" version="9.4">
     <element-def attributes="ROOT, STRUCTURE" description="SQL block" icon="FILE_BLOCK_SQL" id="sql_block" language="SQL">
         <iteration id="000000000">
             <element ref-id="sql_statement" />
@@ -364,7 +365,7 @@
                 <element optional="true" ref-id="authorization_clause" />
             </sequence>
         </one-of>
-        <iteration branch-check="-br_if_not_exists" id="000000176" optional="true">
+        <iteration id="000000176" branch-check="-br_if_not_exists" optional="true">
             <element ref-id="schema_element" />
         </iteration>
     </element-def>
@@ -514,6 +515,7 @@
                 <object-def attributes="SUBJECT" id="000000262" type="TABLE" />
             </variant>
         </qualified-identifier>
+        <token id="" optional="true" type-id="KW_AS" />
         <one-of id="000000263">
             <element ref-id="table_columns_clause" />
             <element ref-id="table_of_type_clause" />
