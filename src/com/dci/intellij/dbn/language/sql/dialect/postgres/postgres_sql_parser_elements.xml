@@ -120,6 +120,7 @@
             <token id="000000046" type-id="KW_TEMP" />
             <token id="000000047" type-id="KW_TEMPORARY" />
         </one-of>
+        <token id="0000000591" optional="true" type-id="KW_AS" />
         <one-of id="000000048">
             <element branch-check="-br_repl -br_globloc -br_temp" ref-id="create_aggregate_statement" version="7.4" />
             <element branch-check="-br_repl -br_globloc -br_temp" ref-id="create_cast_statement" version="7.3" />
