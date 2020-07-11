@@ -108,6 +108,7 @@
     <!-- ========= CREATE ========= -->
     <element-def attributes="SCOPE_ISOLATION, DATA_DEFINITION, TRANSACTIONAL, SPECIFIC" description="CREATE statement" id="create_statement">
         <token id="000000038" type-id="KW_CREATE" />
+        <token id="0000002581" optional="true" type-id="KW_UNLOGGED" />
         <sequence branch="br_repl" id="000000039" optional="true" version="7.2">
             <token id="000000040" type-id="KW_OR" />
             <token flavor="keyword" id="000000041" type-id="FN_REPLACE" />
