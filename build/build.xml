@@ -55,7 +55,7 @@
     </path>
 
     <path id="classpath.ide">
-        <fileset dir="idea-IC-${idea.version}">
+        <fileset dir="${root.dir}/idea-IC-${idea.version}">
             <include name="lib/*.jar"/>
             <include name="redist/*.jar"/>
         </fileset>
