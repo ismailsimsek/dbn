@@ -44,6 +44,9 @@
 <!--
     <property name="deployment.dir" value="${idea.plugins.sandbox}/DBNavigator"/>
 -->
+    <exec executable="/bin/bash">
+        <arg value="${root.dir}/install_idea.sh"/>
+    </exec>
 
     <path id="source.dir">
         <dirset dir="${root.dir}">
@@ -52,7 +55,7 @@
     </path>
 
     <path id="classpath.ide">
-        <fileset dir="${idea.home}">
+        <fileset dir="idea-IC-${idea.version}">
             <include name="lib/*.jar"/>
             <include name="redist/*.jar"/>
         </fileset>
