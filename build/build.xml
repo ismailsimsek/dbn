@@ -58,6 +58,7 @@
         <fileset dir="${root.dir}/idea-IC-${idea.version}">
             <include name="lib/*.jar"/>
             <include name="redist/*.jar"/>
+            <include name="plugins/java/lib/*.jar"/>
         </fileset>
     </path>
     <path id="classpath.project">
