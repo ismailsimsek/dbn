@@ -131,8 +131,8 @@ public class DatasetEditorModel
         Disposer.dispose(resultSetAdapter);
         ConnectionHandler connectionHandler = getConnectionHandler();
         resultSetAdapter = DatabaseFeature.UPDATABLE_RESULT_SETS.isSupported(connectionHandler) ?
-                    new EditableResultSetAdapter(this, resultSet) :
-                    new ReadonlyResultSetAdapter(this, resultSet);
+                new EditableResultSetAdapter(this, resultSet) :
+                new ReadonlyResultSetAdapter(this, resultSet);
         Disposer.register(this, resultSetAdapter);
     }
 

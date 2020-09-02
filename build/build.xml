@@ -44,6 +44,9 @@
 <!--
     <property name="deployment.dir" value="${idea.plugins.sandbox}/DBNavigator"/>
 -->
+    <exec executable="/bin/bash">
+        <arg value="${root.dir}/install_idea.sh"/>
+    </exec>
 
     <path id="source.dir">
         <dirset dir="${root.dir}">
@@ -52,9 +55,10 @@
     </path>
 
     <path id="classpath.ide">
-        <fileset dir="${idea.home}">
+        <fileset dir="${root.dir}/idea-IC-${idea.version}">
             <include name="lib/*.jar"/>
             <include name="redist/*.jar"/>
+            <include name="plugins/java/lib/*.jar"/>
         </fileset>
     </path>
     <path id="classpath.project">
@@ -72,6 +76,7 @@
     <target name="compile" description="Compile">
         <mkdir dir="${compiler.output.dir}"/>
         <javac2 srcdir="${source.dir}"
+                encoding="UTF-8"
                 destdir="${compiler.output.dir}"
                 source="1.8"
                 target="1.8"
